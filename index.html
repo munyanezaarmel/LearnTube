@@ -1,146 +1,919 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <title>Welcome | LearnTube</title>
-  </head>
-  <body>
-    <div class="flex gap-10 border-1 shadow-md items-center p-4">
-      <div class="flex gap-2 items-center">
-        <h1 class="font-extrabold font-poppins title">LearnTube</h1>
-        <p class="sub-title">Inspiring Minds, Ideas Worth Learning</p>
-      </div>
-      <h1 class="font-bold nav-link">WATCH</h1>
-      <h1 class="font-bold nav-link">DISCOVER</h1>
-      <h1 class="font-bold">ATTEND</h1>
-      <h1 class="font-bold">PARTICIPATE</h1>
-      <h1 class="font-bold">ABOUT</h1>
-      <div class="membership text-center">
-        <h1 class="font-bold">MEMBERSHIP</h1>
-      </div>
-      <h1 class="font-bold">SIGN IN</h1>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="34"
-        height="34"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-search"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <path d="m21 21-4.3-4.3" />
-      </svg>
-    </div>
-    <div>
-      <p class="flex m-8 gap-2">
-        WATCH
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-chevron-right"
-        >
-          <path d="m9 18 6-6-6-6" />
-        </svg>
-      </p>
-      <button class="button-library p-3 rounded-lg ml-8">
-        Explore LearnTube Library
-      </button>
-    </div>
-    <div class="flex w-full items-center gap-8">
-      <img
-        src="./first.png"
-        alt="land first image "
-        class="image-first ml-8 mt-4"
-      />
-      <div class="right-description  gap-4 flex flex-col">
-        <div class="flex gap-4">
-          <div class="arrow-right text-center flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right m-4"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </div>
-          <div>
-            <h1 class="font-bold">Attend LearnTube event</h1>
-            <p>Independent LearnTube events feature live speakers and LearnTube videos</p>
-          </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>LearnTube</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- header section starts -->
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-lightbulb"></i> LearnTube</a>
+
+        <nav class="navbar">
+            <div id="close-navbar" class="fas fa-times"></div>
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#courses">courses</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="account-btn" class="fas fa-user"></div>
+            <div id="menu-btn" class="fas fa-bars"></div>
         </div>
-        <div class="flex gap-4">
-          <div class="arrow-right text-center flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right m-4"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </div>
-          <div>
-            <h1 class="font-bold">Attend LearnTube event</h1>
-            <p>Independent LearnTube events feature live speakers and LearnTube videos</p>
-          </div>
+    </header>
+
+    <!-- account form section starts -->
+
+    <div class="account-form">
+
+        <div id="close-form" class="fas fa-times"></div>
+
+        <div class="buttons">
+            <span class="btn active login-btn">login</span>
+            <span class="btn register-btn">register</span>
         </div>
-        <div class="flex gap-4 ">
-          <div class="arrow-right text-center flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-arrow-right m-4"
-            >
-              <path d="M5 12h14" />
-              <path d="m12 5 7 7-7 7" />
-            </svg>
-          </div>
-          <div>
-            <h1 class="font-bold">Attend LearnTube event</h1>
-            <p>Independent LearnTube events feature live speakers and LearnTube videos</p>
-          </div>
-        </div>
-      </div>
+
+        <form class="login-form active" action="">
+            <h3>login now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <div class="flex">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+        <form class="register-form" action="">
+            <h3>register now</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="password" placeholder="enter your password" class="box">
+            <input type="password" placeholder="confirm your password" class="box">
+            <input type="submit" value="register now" class="btn">
+        </form>
+
     </div>
-    <script src="script.js"></script>
-  </body>
+
+    <!-- account form section ends -->
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section id="home" class="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <section class="swiper-slide slide" style="background: url(images/home-slide-1.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>Empower Your Future with Knowledge!</h3>
+                        <p>Join us on a journey of self-discovery and skill enhancement. Our platform empowers you to shape your future through expert-led courses. Unleash your potential today!</p>
+                        <a href="#" class="btn">get started</a>
+                    </div>
+                </section>
+
+                <!-- <section class="swiper-slide slide" style="background: url(images/home-slide-2.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>the best courses you will find here!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptas fugit, officiis
+                            explicabo distinctio ea animi ducimus.</p>
+                        <a href="#" class="btn">get started</a>
+                    </div>
+                </section>
+
+                <section class="swiper-slide slide" style="background: url(images/home-slide-3.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>the best courses you will find here!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptas fugit, officiis
+                            explicabo distinctio ea animi ducimus.</p>
+                        <a href="#" class="btn">get started</a>
+                    </div>
+                </section> -->
+
+            </div>
+
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- subjects section starts -->
+
+    <section class="subjects">
+
+        <h1 class="heading">
+            our popular subjects
+        </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/subject-icon-1.png" alt="">
+                <h3>graphic design</h3>
+                <p>12 modules</p>
+            </div>
+
+            <div class="box">
+                <img src="images/subject-icon-2.png" alt="">
+                <h3>mathemetics</h3>
+                <p>12 modules</p>
+            </div>
+
+            <div class="box">
+                <img src="images/subject-icon-3.png" alt="">
+                <h3>Multimedia</h3>
+                <p>12 modules</p>
+            </div>
+
+            <div class="box">
+                <img src="images/subject-icon-4.png" alt="">
+                <h3> web development</h3>
+                <p>12 modules</p>
+            </div>
+
+            <div class="box">
+                <img src="images/subject-icon-5.png" alt="">
+                <h3>Computer security</h3>
+                <p>12 modules</p>
+            </div>
+
+            <div class="box">
+                <img src="images/subject-icon-6.png" alt="">
+                <h3>Introduction to programming</h3>
+                <p>12 modules</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- subjects section end -->
+
+    <!-- home courses slider section starts -->
+
+    <!-- <section class="home-courses">
+
+        <h1 class="heading"> our popular courses </h1>
+
+        <div class="swiper home-courses-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/course-1-1.png" alt="">
+                        <h3>web development</h3>
+                        <div class="content">
+                            <h3>web development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum numquam, maxime omnis.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/course-1-2.png" alt="">
+                        <h3>web development</h3>
+                        <div class="content">
+                            <h3>web development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum numquam, maxime omnis.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/course-1-3.png" alt="">
+                        <h3>web development</h3>
+                        <div class="content">
+                            <h3>web development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum numquam, maxime omnis.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/course-1-4.png" alt="">
+                        <h3>web development</h3>
+                        <div class="content">
+                            <h3>web development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum numquam, maxime omnis.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/course-1-5.png" alt="">
+                        <h3>web development</h3>
+                        <div class="content">
+                            <h3>web development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum numquam, maxime omnis.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/course-1-6.png" alt="">
+                        <h3>web development</h3>
+                        <div class="content">
+                            <h3>web development</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum numquam, maxime omnis.</p>
+                            <a href="#" class="btn">read more</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section> -->
+
+    <!-- home courses slider section end -->
+
+    <section class="heading-link">
+        <h3>about us</h3>
+        <p><a href="home.html">home</a> / about </p>
+    </section>
+
+    <!-- about section starts -->
+
+    <section id="about" class="about">
+
+        <div class="image">
+            <img src="images/about-img.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3 class="about-title">we have best courses for you</h3>
+            <p>So, why wait? Join us today and unlock your full potential, one course at a time. Your path to personal and professional growth begins here. Dive into a world of knowledge, transform your skills, and achieve your dreams with our online learning platform.</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <img src="images/about-icon-1.png" alt="">
+                    <h3>20+</h3>
+                    <span>courses</span>
+                </div>
+
+                <div class="icons">
+                    <img src="images/about-icon-2.png" alt="">
+                    <h3>100+</h3>
+                    <span>students</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- about section end -->
+
+    <!-- teachers section starts -->
+
+    <section class="teachers">
+
+        <h1 class="heading">expert teachers</h1>
+
+        <div class="swiper teachers-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/teacher-1.png" alt="">
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3>Mary Flinn</h3>
+                        <span>expert tutor</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/Armel-1.png" alt="">
+                        <div class="share">
+                            <a href="https://github.com/munyanezaarmel" class="fab fa-facebook-f"></a>
+                            <a href="https://github.com/munyanezaarmel" class="fab fa-twitter"></a>
+                            <a href="https://github.com/munyanezaarmel" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3>Munyaneza A.</h3>
+                        <span>web dev Expert</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/teacher-3.png" alt="">
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3>Laurel Manz</h3>
+                        <span>expert tutor</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/teacher-4.png" alt="">
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3>Any Princeton</h3>
+                        <span>expert tutor</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/teacher-5.png" alt="">
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3>Michael Hill</h3>
+                        <span>expert tutor</span>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/teacher-6.png" alt="">
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <h3>Victory Saint</h3>
+                        <span>expert tutor</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+    <!-- teachers section ends -->
+
+    <!-- students review section starts -->
+
+    <section class="reviews">
+
+        <h1 class="heading"> our students review</h1>
+
+        <div class="swiper reviews-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <p>I can't thank this platform enough! The courses are not only informative but also incredibly engaging. The instructors are top-notch, and the flexibility of learning at my own pace is a game-changer. I've gained valuable skills and knowledge that have boosted my career. Highly recommend</p>
+                    <img src="images/teacher-1.png" alt="">
+                    <h3>zip lhii</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda explicabo dicta possimus
+                        molestias incidunt hic. Corrupti eum, adipisci in consequuntur ipsa commodi. Sit voluptas magnam
+                        deserunt, distinctio natus qui.</p>
+                    <img src="images/pic-2.png" alt="">
+                    <h3>Pam Burton</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda explicabo dicta possimus
+                        molestias incidunt hic. Corrupti eum, adipisci in consequuntur ipsa commodi. Sit voluptas magnam
+                        deserunt, distinctio natus qui.</p>
+                    <img src="images/pic-3.png" alt="">
+                    <h3>Will Gomez</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda explicabo dicta possimus
+                        molestias incidunt hic. Corrupti eum, adipisci in consequuntur ipsa commodi. Sit voluptas magnam
+                        deserunt, distinctio natus qui.</p>
+                    <img src="images/pic-4.png" alt="">
+                    <h3>Sophie Hubert</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda explicabo dicta possimus
+                        molestias incidunt hic. Corrupti eum, adipisci in consequuntur ipsa commodi. Sit voluptas magnam
+                        deserunt, distinctio natus qui.</p>
+                    <img src="images/pic-5.png" alt="">
+                    <h3>Roland Trells</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi assumenda explicabo dicta possimus
+                        molestias incidunt hic. Corrupti eum, adipisci in consequuntur ipsa commodi. Sit voluptas magnam
+                        deserunt, distinctio natus qui.</p>
+                    <img src="images/pic-6.png" alt="">
+                    <h3>Jane Kim</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+    <!-- students review section ends -->
+
+    <!-- courses section starts -->
+
+    <section class="heading-link">
+        <h3> our courses</h3>
+        <p><a href="home.html">home</a> / courses</p>
+    </section>
+
+    <section id="courses" class="courses">
+
+        <h1 class="heading"> our famous courses</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/course-2-1.jpg" alt="">
+                    <h3>web development</h3>
+                </div>
+                <div class="content">
+                    <h3>HTML & CSS CRASH COURSE</h3>
+                    <p>Join our HTML and CSS course Learn HTML and CSS Fundamentals: Build the Web of Tomorrow Today.</p>
+                    <a href="web dev section/index.html" target="_blank" class="btn">Take course</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 12 modules </i></span>
+                        <span><i class="fas fa-clock"> 6 hours </i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/2036656/pexels-photo-2036656.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    <h3>Cyber security</h3>
+                </div>
+                <div class="content">
+                    <h3>Introduction to SQL injection</h3>
+                    <p>Guarding Your Data: Learn SQL Injection Defense and Protect Your Systems. Enroll now to become a cybersecurity pro!</p>
+               <a href="web dev section/index.html" target="_blank" class="btn">Take course</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 2 modules </i></span>
+                        <span><i class="fas fa-clock"> 1 hour </i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/course-2-3.jpg" alt="">
+                    <h3>mathemetics</h3>
+                </div>
+                <div class="content">
+                    <h3>mathemetics for Engineers II</h3>
+                    <p>Math for Engineers: Bridge Theory to Practice. Elevate your engineering skills with our comprehensive math course</p>
+                   <a href="web dev section/index.html" target="_blank" class="btn">Take course</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 9 modules </i></span>
+                        <span><i class="fas fa-clock"> 18 hours </i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    <h3>Multimedia</h3>
+                </div>
+                <div class="content">
+                    <h3> Micromedia Flash 8 Crash course </h3>
+                    <p>Flash 8 Crash Course: learn the best to tool to build graphics and unlesh your creativity </p>
+              <a href="web dev section/index.html" target="_blank" class="btn">Take course</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 1 modules </i></span>
+                        <span><i class="fas fa-clock"> 2 hours </i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/7484736/pexels-photo-7484736.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="content">
+                    <h3>Figma Begineer course!</h3>
+                    <p>Unlock the world of digital design with our Figma beginner course Design Your Vision, Bring It to Life</p>
+                      <a href="web dev section/index.html" target="_blank" class="btn">Take course</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 1 modules </i></span>
+                        <span><i class="fas fa-clock"> 1 hour </i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    <h3>Web development</h3>
+                </div>
+                <div class="content">
+                    <h3>Introduction to Javascript!</h3>
+                    <p>Discover JavaScript: Learn to wield the DOM, create dynamic web experiences, and transform your coding skills.</p>
+                    <a href="web dev section/index.html" target="_blank" class="btn">Take course</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 12 videos </i></span>
+                        <span><i class="fas fa-clock"> 6 hours </i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="box hide">
+                <div class="image">
+                    <img src="images/course-2-7.jpg" alt="">
+                    <h3>teaching</h3>
+                </div>
+                <div class="content">
+                    <h3>choose what's best for you!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, sequi voluptates.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 12 modules </i></span>
+                        <span><i class="fas fa-clock"> 6 hours </i></span>
+                    </div>
+                </div>
+            </div> -->
+<!-- 
+            <div class="box hide">
+                <div class="image">
+                    <img src="images/course-2-8.jpg" alt="">
+                    <h3>designing</h3>
+                </div>
+                <div class="content">
+                    <h3>choose what's best for you!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, sequi voluptates.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 12 modules </i></span>
+                        <span><i class="fas fa-clock"> 6 hours </i></span>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="box hide">
+                <div class="image">
+                    <img src="images/course-2-9.jpg" alt="">
+                    <h3>dancing</h3>
+                </div>
+                <div class="content">
+                    <h3>choose what's best for you!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, sequi voluptates.</p>
+                    <a href="#" class="btn">read more</a>
+                    <div class="icons">
+                        <span><i class="fas fa-book"> 12 modules </i></span>
+                        <span><i class="fas fa-clock"> 6 hours </i></span>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="load-more">
+            <div class="btn">load more</div>
+        </div>
+
+    </section>
+
+    <!-- courses section ends -->
+
+    <!-- contact section starts -->
+
+    <section class="heading-link">
+        <h3> contact us</h3>
+        <p><a href="home.html">home</a> / contact</p>
+    </section>
+
+    <section id="contact" class="contact">
+
+        <!-- <h1 class="heading"> get in touch </h1> -->
+
+        <div class="icons-container">
+<!-- 
+            <div class="icons">
+                <i class="fas fa-clock"></i>
+                <h3>opening hours :</h3>
+                <p>00:07am to 00:06pm</p>
+            </div> -->
+
+            <!-- <div class="icons">
+                <i class="fas fa-phone"></i>
+                <h3>phone :</h3>
+                <p>+01-333-999</p>
+                <p>911-222-944</p>
+            </div> -->
+
+            <!-- <div class="icons">
+                <i class="fas fa-envelope"></i>
+                <h3> email : </h3>
+                <p>ronytacodev@gmail.com</p>
+                <p>rteducation@edu.com</p>
+            </div> -->
+
+            <!-- <div class="icons">
+                <i class="fas fa-map"></i>
+                <h3>address :</h3>
+                <p>Lima, Perú</p>
+            </div> -->
+
+        </div>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/contact-img.png" alt="">
+            </div>
+
+            <form action="">
+                <h3>send us a message</h3>
+                <input type="text" placeholder="name" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="number" placeholder="phone" class="box">
+                <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- faq section starts -->
+
+    <!-- <section class="faq">
+
+        <h1 class="heading">frequently asked questions</h1>
+
+        <div class="accordion-container">
+
+            <div class="accordion active">
+                <div class="accordion-heading">
+                    <h3>how to contact for help?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, natus, sunt similique
+                    molestiae ad, sapiente tempora saepe iusto fugiat cum modi aspernatur quia consequuntur atque
+                    perspiciatis possimus accusamus quidem!
+                </p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>what is the best career in 2023?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, natus, sunt similique
+                    molestiae ad, sapiente tempora saepe iusto fugiat cum modi aspernatur quia consequuntur atque
+                    perspiciatis possimus accusamus quidem!
+                </p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>how much fees for web development?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, natus, sunt similique
+                    molestiae ad, sapiente tempora saepe iusto fugiat cum modi aspernatur quia consequuntur atque
+                    perspiciatis possimus accusamus quidem!
+                </p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>can I choose my own tutor?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, natus, sunt similique
+                    molestiae ad, sapiente tempora saepe iusto fugiat cum modi aspernatur quia consequuntur atque
+                    perspiciatis possimus accusamus quidem!
+                </p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>what payment methods are available?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, natus, sunt similique
+                    molestiae ad, sapiente tempora saepe iusto fugiat cum modi aspernatur quia consequuntur atque
+                    perspiciatis possimus accusamus quidem!
+                </p>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-heading">
+                    <h3>can I have free trial for a month?</h3>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <p class="accordion-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, natus, sunt similique
+                    molestiae ad, sapiente tempora saepe iusto fugiat cum modi aspernatur quia consequuntur atque
+                    perspiciatis possimus accusamus quidem!
+                </p>
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <!-- faq section ends -->
+
+    <!-- logo slider starts -->
+
+    <section class="logo-container">
+
+        <div class="swiper logo-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/ur.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/cmu.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/alu.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/ulk.png" alt=""></div>
+                <div class="swiper-slide"><img src="images/rp.png" alt=""></div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- logo slider ends -->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3><i class="fas fa-lightbulb"></i> LearnTube</h3>
+                <p>Join us on a journey of self-discovery and skill enhancement. Our platform empowers you to shape your future through expert-led courses. Unleash your potential today.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="home.html" class="link">home</a>
+                <a href="about.html" class="link">about</a>
+                <a href="courses.html" class="link">courses</a>
+                <a href="contact.html" class="link">contact</a>
+            </div>
+
+            <div class="box">
+                <h3>useful links</h3>
+                <a href="#" class="link">help center</a>
+                <a href="#" class="link">ask questions</a>
+                <a href="#" class="link">send feedback</a>
+                <a href="#" class="link">private policy</a>
+                <a href="#" class="link">terms of use</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" name="" placeholder="enter your email" id="" class="email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="credit"> <span>LearnTube 2023</span> | all rights reserved! </div>
+
+    </section>
+    <!-- footer section ends -->
+
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link -->
+    <script src="js/script.js"></script>
+</body>
+
 </html>
